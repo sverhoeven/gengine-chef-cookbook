@@ -33,7 +33,7 @@ if node.gengine.clients.has_key? 'search'
 end
 
 # make sure that duplicates from all configuration sources get removed
-node.gengine.clients.nodes.uniq!
+node.default['gengine']['clients']['nodes'] = node.gengine.clients.nodes.uniq
 
 # list of already know clients from the master
 clients = Gengine::Config::list 'qconf -ss'

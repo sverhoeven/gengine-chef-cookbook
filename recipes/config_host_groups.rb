@@ -63,7 +63,7 @@ else
       end
     end
     # make sure to remove duplicate nodes
-    host_group.uniq!
+    host_group = host_group.uniq
     execution_nodes = execution_nodes + host_group
     # handle host group without nodes
     host_group << 'NONE' if host_group.empty?
