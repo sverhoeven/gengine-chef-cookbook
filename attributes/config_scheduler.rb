@@ -3,7 +3,7 @@ default[:gengine][:scheduler] = Hash.new
 # defaults for the Grid Engine scheduler configuration
 default[:gengine][:defaults][:scheduler] = <<-EOF
 algorithm                         default
-schedule_interval                 0:0:10
+schedule_interval                 0:0:1
 maxujobs                          0
 queue_sort_method                 seqno
 job_load_adjustments              np_load_avg=0.50
